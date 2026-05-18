@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+}
+
+/* Fix for Leaflet marker panes Z-index if needed */
+.leaflet-pane {
+    z-index: 10 !important;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+    z-index: 20 !important;
+}
