@@ -32,7 +32,7 @@ powershell -c "irm bun.sh/install.ps1 | iex"
    ```
 2. Naviguez dans le dossier du projet :
    ```bash
-   cd rewrite_react
+   cd Carte-OSM-Galilee
    ```
 3. Installez les dépendances :
    ```bash
