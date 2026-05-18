@@ -26,15 +26,15 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 
 ## Installation du Projet
 
-1. Clonez ou téléchargez le projet.
+1. Clonez le projet :
    ```bash
    git clone https://github.com/DavidPauvert/Carte-OSM-Galilee.git
    ```
-3. Naviguez dans le dossier du projet :
+2. Naviguez dans le dossier du projet :
    ```bash
-   cd Carte-OSM-Galilee
+   cd rewrite_react
    ```
-4. Installez les dépendances :
+3. Installez les dépendances :
    ```bash
    bun install
    ```
