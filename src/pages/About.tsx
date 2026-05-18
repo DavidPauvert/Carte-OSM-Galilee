@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Page "À propos" présentant l'objectif du site et son fonctionnement.
+ */
 export const About: React.FC = () => {
     return (
         <div className="prose prose-blue max-w-none">

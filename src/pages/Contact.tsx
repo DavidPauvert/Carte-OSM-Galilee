@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Page de contact affichant les coordonnées et un formulaire d'envoi de message.
+ */
 export const Contact: React.FC = () => {
     return (
         <div className="max-w-2xl mx-auto">

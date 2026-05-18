@@ -1,20 +1,33 @@
 /**
- * This file is the entry point for the React app, it sets up the root
- * element and renders the App component to the DOM.
+ * Ce fichier est le point d'entrée de l'application React.
+ * Il configure l'élément racine et affiche le composant App dans le DOM.
  *
- * It is included in `src/index.html`.
+ * Il est inclus dans `src/index.html`.
  */
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 
-const elem = document.getElementById("root")!;
+// Récupération de l'élément HTML où l'application sera injectée
+const elem = document.getElementById("root");
+if (!elem) {
+    throw new Error("Impossible de trouver l'élément racine avec l'id 'root'");
+}
+
+// Définition de la structure de l'application avec le mode strict activé
 const app = (
     <StrictMode>
         <App />
     </StrictMode>
 );
 
+// Gestion du Hot Module Replacement (HMR) spécifique à Bun
+// Cela permet de mettre à jour l'application sans recharger toute la page
 // https://bun.com/docs/bundler/hot-reloading#import-meta-hot-data
-(import.meta.hot.data.root ??= createRoot(elem)).render(app);
+const root = import.meta.hot
+    ? (import.meta.hot.data.root ??= createRoot(elem))
+    : createRoot(elem);
+
+// Rendu effectif de l'application
+root.render(app);
