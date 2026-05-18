@@ -72,7 +72,13 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             {/* Zone de contenu principal */}
             <main className="max-w-7xl mx-auto p-4 md:p-8">
-                <div className="bg-white rounded-[30px] md:rounded-[50px] border border-black shadow-2xl p-6 md:p-12 min-h-[60vh]">
+                <div 
+                    className={`bg-white rounded-[30px] md:rounded-[50px] border border-black shadow-2xl transition-all duration-300
+                    ${location.pathname === "/" 
+                        ? "p-0 overflow-hidden" 
+                        : "p-6 md:p-12 min-h-[60vh]"
+                    }`}
+                >
                     {children}
                 </div>
             </main>

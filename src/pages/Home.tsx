@@ -44,7 +44,7 @@ export const Home: React.FC = () => {
     }, []);
 
     return (
-        <div className="h-[60vh] w-full rounded-[30px] overflow-hidden">
+        <div className="h-[50vh] md:h-[70vh] w-full">
             {/* Conteneur principal de la carte Leaflet */}
             <MapContainer
                 center={center}
